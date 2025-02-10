@@ -18,7 +18,7 @@ public class Game {
     private Double score;
     private String imgUrl;
 
-    @Column(columnDefinition = "TEXT")visa paltinum
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
 
     @Column(columnDefinition = "TEXT")
