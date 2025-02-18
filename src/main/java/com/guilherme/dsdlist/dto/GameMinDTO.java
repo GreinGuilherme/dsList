@@ -1,6 +1,7 @@
 package com.guilherme.dsdlist.dto;
 
 import com.guilherme.dsdlist.entities.Game;
+import com.guilherme.dsdlist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -11,6 +12,14 @@ public class GameMinDTO {
     private String shortDescription;
 
     public GameMinDTO(Game entity) {
+        this.id = entity.getId();
+        this.title = entity.getTitle();
+        this.year = entity.getYear();
+        this.imgUrl = entity.getImgUrl();
+        this.shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection entity) {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.year = entity.getYear();
